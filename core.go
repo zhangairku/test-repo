@@ -11,3 +11,11 @@ func Core() string {
 	}
 	return v7.String()
 }
+
+func CoreV2() int {
+	v7, err := uuid.NewV7()
+	if err != nil {
+		panic(err)
+	}
+	return int(v7.ID())
+}
